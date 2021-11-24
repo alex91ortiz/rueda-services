@@ -1,17 +1,18 @@
 import { RoadModel } from '@/domain/models/road';
+import { UserModel } from '@/domain/models/user';
 import { model, Schema } from "mongoose";
 
 const schema = new Schema<RoadModel>({
     id: String,
     to: { 
         address: String,
-        lon: Number,
-        lat: Number, 
+        longitude: Number,
+        latitude: Number, 
     },
     from: { 
         address: String,
-        lon: Number,
-        lat: Number, 
+        longitude: Number,
+        latitude: Number, 
     },
     startDate: String,
     startTime: String,
@@ -19,7 +20,8 @@ const schema = new Schema<RoadModel>({
     name: String,
     description: String,
     users: [],
-    groups: []
+    groups: [],
+    creator: {}
 });
 
 export const RoadModelSchema = model<RoadModel>('roads', schema);

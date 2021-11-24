@@ -1,14 +1,16 @@
+import { UserModel } from "@/domain/models/user";
+
 export type RoadModel = {
     id: number | string;
     to: { 
         address: string;
-        lon: number;
-        lat: number; 
+        longitude: number;
+        latitude: number; 
     };
     from: { 
         address: string;
-        lon: number;
-        lat: number; 
+        longitude: number;
+        latitude: number; 
     };
     startDate: string;
     startTime: string;
@@ -17,6 +19,7 @@ export type RoadModel = {
     description: string;
     users: [];
     groups: [];
+    creator: UserModel;
 }
 
 export type AddRoadParams = Omit<RoadModel, 'id'>
