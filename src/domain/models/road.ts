@@ -15,6 +15,8 @@ export type RoadModel = {
     startDate: string;
     startTime: string;
     duration: number;
+    distance: number;
+    period: number;
     name: string;
     description: string;
     users: [];

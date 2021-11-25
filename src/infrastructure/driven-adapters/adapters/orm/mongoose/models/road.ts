@@ -17,6 +17,8 @@ const schema = new Schema<RoadModel>({
     startDate: String,
     startTime: String,
     duration: Number,
+    distance: Number,
+    period: Number,
     name: String,
     description: String,
     users: [],
