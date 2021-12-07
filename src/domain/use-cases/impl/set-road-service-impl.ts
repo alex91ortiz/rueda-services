@@ -8,9 +8,7 @@ export class SetRoadServiceImpl implements ISetRoadService {
     constructor
     (
         @Inject(SET_ROAD_REPOSITORY) private readonly setRoadRepository: ISetRoadRepository
-    ) {
-        
-    }
+    ) {}
     
     async updateRoad(id: string | number, data: AddRoadParams): Promise<void>{
          await this.setRoadRepository.updateRoadRepository(id, data);
