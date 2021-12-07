@@ -23,7 +23,8 @@ const schema = new Schema<RoadModel>({
     description: String,
     users: [],
     groups: [],
-    creator: {}
+    creator: {},
+    coordinates: []
 });
 
 export const RoadModelSchema = model<RoadModel>('roads', schema);

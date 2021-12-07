@@ -22,6 +22,7 @@ export type RoadModel = {
     users: [];
     groups: [];
     creator: UserModel;
+    coordinates:[];
 }
 
 export type AddRoadParams = Omit<RoadModel, 'id'>
