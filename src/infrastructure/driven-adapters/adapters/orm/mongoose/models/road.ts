@@ -24,7 +24,11 @@ const schema = new Schema<RoadModel>({
     users: [],
     groups: [],
     creator: {},
-    coordinates: []
+    coordinates: [],
+    likes: [],
+    comments: [],
+    status: Boolean,
+    share: Boolean
 });
 
 export const RoadModelSchema = model<RoadModel>('roads', schema);

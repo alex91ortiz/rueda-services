@@ -23,6 +23,10 @@ export type RoadModel = {
     groups: [];
     creator: UserModel;
     coordinates:[];
+    likes: [];
+    comments: [];
+    status: boolean;
+    share: boolean;
 }
 
 export type AddRoadParams = Omit<RoadModel, 'id'>
