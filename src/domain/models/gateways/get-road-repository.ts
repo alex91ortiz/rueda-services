@@ -5,7 +5,9 @@ export const GET_ROAD_REPOSITORY = "GET_ROAD_REPOSITORY";
 export interface IGetRoadRepository {
     getRoadsRepository(location: IGetRoadRepository.Params): Promise<RoadModel[]>;
     
-    getRoadByIdREpository(id: string): Promise<RoadModel>;
+    getRoadByIdRepository(id: string): Promise<RoadModel>;
+
+    getRoadsByUserRepository(id: string): Promise<RoadModel[]>;
 }
 
 export namespace IGetRoadRepository{
