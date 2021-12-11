@@ -7,7 +7,7 @@ export interface IGetRoadRepository {
     
     getRoadByIdRepository(id: string): Promise<RoadModel>;
 
-    getRoadsByUserRepository(id: string): Promise<RoadModel[]>;
+    getRoadsByUserRepository(id: string, status: boolean): Promise<RoadModel[]>;
 }
 
 export namespace IGetRoadRepository{

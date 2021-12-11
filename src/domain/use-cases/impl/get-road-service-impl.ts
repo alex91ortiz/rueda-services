@@ -8,8 +8,8 @@ export class GetRoadServiceImpl implements IGetRoadService {
     constructor(
         @Inject(GET_ROAD_REPOSITORY) private readonly getRoadRepository: IGetRoadRepository
     ) {}
-    async getRoadsByUser(id: string): Promise<RoadModel[]> {
-        return await this.getRoadRepository.getRoadsByUserRepository(id);
+    async getRoadsByUser(id: string, status: boolean): Promise<RoadModel[]> {
+        return await this.getRoadRepository.getRoadsByUserRepository(id, status);
     }
     async getRoads(location: IGetRoadRepository.Params): Promise<RoadModel[]> {
         const roads = await this.getRoadRepository.getRoadsRepository(location);

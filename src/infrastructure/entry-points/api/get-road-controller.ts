@@ -32,9 +32,9 @@ export class GetRoadController {
         return await this.getRoadService.getRoadById(id);
     }
 
-    @Get("/user/:id")
-    async getRoadsByUser(@Param("id") id: string): Promise<any> {
-        return await this.getRoadService.getRoadsByUser(id);
+    @Get("/user/:id/:status")
+    async getRoadsByUser(@Param("id") id: string, @Param("status") status: boolean): Promise<any> {
+        return await this.getRoadService.getRoadsByUser(id, status);
     }
     
 
