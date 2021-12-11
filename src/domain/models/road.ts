@@ -25,7 +25,7 @@ export type RoadModel = {
     coordinates:[];
     likes: [];
     comments: [];
-    status: boolean;
+    status: number;
     share: boolean;
 }
 

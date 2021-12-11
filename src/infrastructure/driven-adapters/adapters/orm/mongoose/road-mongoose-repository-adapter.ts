@@ -6,7 +6,7 @@ import {RoadModelSchema} from "@/infrastructure/driven-adapters/adapters/orm/mon
 
 export class RoadMongooseRepositoryAdapter implements IAddRoadRepository, IGetRoadRepository, ISetRoadRepository {
 
-    async getRoadsByUserRepository(id: string, status: boolean): Promise<RoadModel[]> {
+    async getRoadsByUserRepository(id: string, status: number): Promise<RoadModel[]> {
         return await RoadModelSchema.find({"creator._id": id, "status": status});
     }
     async getRoadsRepository(location: IGetRoadRepository.Params): Promise<RoadModel[]> {

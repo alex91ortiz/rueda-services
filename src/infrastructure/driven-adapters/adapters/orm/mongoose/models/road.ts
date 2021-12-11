@@ -27,7 +27,7 @@ const schema = new Schema<RoadModel>({
     coordinates: [],
     likes: [],
     comments: [],
-    status: Boolean,
+    status: Number,
     share: Boolean
 });
 
